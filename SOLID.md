@@ -8,4 +8,4 @@ SOLID is an acronym for 5 design principles in practice. They are:
 5. **D**ependency Inversion Principle.
 
 Each Principle is demonstrated in such a way that, a little python program is written before and after implementation of respective principle that underlies the importance of using it.
-[Markdown tutorial](https://www.tutorialsandyou.com/markdown/ 'Learn Markdown')
+[Click here for Notebook](https://github.com/Yugandhar-M/Conduira-Internship/blob/main/solid.ipynb)
