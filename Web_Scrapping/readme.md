@@ -15,3 +15,5 @@ Run the following command in your virtual environment:
 ```bat
 pip install -r requirements_web_scrapping.txt
 ```
+
+[Click here for python script](https://github.com/Yugandhar-M/Conduira-Internship/blob/main/Web_Scrapping/readme.md)
