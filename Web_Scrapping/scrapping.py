@@ -22,10 +22,7 @@ with open('Ratings.txt','w') as f:
             ratings.append(rating)
 
 
-#     for i in len(ratings):
-#         
-# f.close()
-# print(episodes)
-
-episodes = ['S' + e.split('.')[0] if int(e.split('.')[1]) == 1 else '' for e in episodes]
-
+with open("ratings.txt","w") as f:
+    for i in range(len(episodes)):
+        f.write(f'Episode: {episodes[i]} -- rating: {ratings[i]}\n')
+f.close()
