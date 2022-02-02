@@ -18,4 +18,5 @@ Clone the repository.
 Install all dependencies. Enter:
 ```python manage.py runserver```
 in directory of entire repository to start the app.
+
 [Click here](https://github.com/Yugandhar-M/Conduira-Internship/blob/main/Track_Learnings/manage.py)
