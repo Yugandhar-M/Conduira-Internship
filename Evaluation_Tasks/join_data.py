@@ -2,6 +2,9 @@ import csv
 import math
 import ast
 
+# To return data from activity_data file 
+# Input: csvDictReader object
+# Output: List of Dictionaries; Each dictionary is extracted data of each row
 def return_activity_data(activity_data):
     activity_list = []
     for row in activity_data:
@@ -10,27 +13,26 @@ def return_activity_data(activity_data):
             try:
                 temp_dict["watched"]=ast.literal_eval(row["watched"])["M"]["value"]["S"]
             except:
-                # temp_dict["watched"]=ast.literal_eval(row["watched"])["M"]["value"]["NULL"]
                 temp_dict["watched"]=math.nan
             try:
                 temp_dict["rating"]=ast.literal_eval(row["rating"])["M"]["value"]["S"]
             except:
-                # temp_dict["rating"]=ast.literal_eval(row["rating"])["M"]["value"]["NULL"]
                 temp_dict["rating"]=math.nan
             try:
                 temp_dict["watchlist"]=ast.literal_eval(row["watchlist"])["M"]["value"]["S"]
             except:
-                # temp_dict["watchlist"]=ast.literal_eval(row["watchlist"])["M"]["value"]["NULL"]
                 temp_dict["watchlist"]=math.nan
             try:
                 temp_dict["hide"]=ast.literal_eval(row["hide"])["M"]["value"]["S"]
             except:
-                # temp_dict["hide"]=ast.literal_eval(row["hide"])["M"]["value"]["NULL"]
                 temp_dict["hide"]=math.nan
             temp_dict["id"]=ast.literal_eval(row["id"])["S"].split('_')[0]
             activity_list.append(temp_dict)
     return activity_list
 
+# To check if media from data.csv file has an activity associated with it
+# Input: data row of media, List of Dictionaries of all activities 
+# Output: Activity associated if any else None
 def check_id(row,activity_list):
     val = False
     for item in activity_list:
@@ -40,6 +42,7 @@ def check_id(row,activity_list):
     else:
         return None
 
+# main function
 def main():
     with open("activity_data.csv","r") as f:
         activity_data = csv.DictReader(f)
@@ -62,7 +65,7 @@ def main():
                 out_data.append(str(temp_dict))
     ff.close()
     
-    with open("Output_new.csv","w",newline="") as file:
+    with open("output_generated.csv","w",newline="") as file:
         obj = csv.writer(file)
         obj.writerow(["_source"])
         for i in out_data:
