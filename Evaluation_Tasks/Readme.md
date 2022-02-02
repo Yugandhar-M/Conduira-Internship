@@ -1,7 +1,7 @@
 # Evaluation Tasks Set by Company
 
 ## Python Exercise
-Generates the output csv file by combining data from data.csv and activity_data.csv as shown in sample file 'output.csv'. The generated file will be names 'output_generated.csv'
+Generates the output csv file by combining data from 'data.csv' and 'activity_data.csv' as shown in sample file 'output.csv'. The generated file will be named 'output_generated.csv'
 [Click here for python file](https://github.com/Yugandhar-M/Conduira-Internship/blob/main/Evaluation_Tasks/join_data.py)
 
 ## SQL Exercise
